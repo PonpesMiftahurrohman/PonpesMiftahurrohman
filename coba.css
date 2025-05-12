@@ -4,8 +4,17 @@ body {
     background: linear-gradient(to bottom right,  #388e3c,#076107);
     color: #fff;
   }
-  
- .logo-title {
+/* Header */
+header {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ffffff50;
+}
+
+/* Logo dan Judul */
+.logo-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,96 +23,182 @@ body {
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    padding: 5px;
-    background: transparent; /* atau bisa juga dihapus */
-  }
-  
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 5px;
+}
 
 .title-text h1 {
   margin: 0;
   font-size: 2rem;
+  color: white;
 }
 
 .title-text p {
   margin: 0;
   font-size: 1rem;
+  color: white;
 }
-header {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #ffffff50; /* Pembatas bawah */
-  }
-  
-  nav {
-    text-align: center;
-    margin: 0;
-    padding: 15px 0;
-    border-bottom: 2px solid #ffffff50; /* Pembatas bawah menu */
-    background-color: rgba(0, 0, 0, 0.15);
-  }
-  
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  section.hero {
-    padding: 100px 20px; /* Perbesar padding atas dan bawah */
-    height: 80vh;
-    text-align: center;
-    background: url('images/BCG.jpg') no-repeat center center/cover;
-    background-size: 100% 100%;
-    color:linear-gradient(to bottom right, #00a68B, #13add7);
-  }
-  
-  .hero h2 {
-    font-size: 3rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-family: 'Amiri', serif;
-    color: white;
-    direction: rtl;
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: white;
-    white-space: pre-wrap;
-    overflow: hidden;
-    border-right: 3px solid white;
-    padding-right: 5px;
-  }
-  
 
-  
-  section.hero .btn {
-    padding: 12px 25px; /* Perbesar ukuran tombol */
-    font-size: 1.2rem; /* Perbesar teks pada tombol */
+/* Tombol daftar pojok kanan atas */
+.top-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #388e3c;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  z-index: 999;
+}
+
+.top-btn:hover {
+  background-color: #dcedc8;
+}
+
+/* Navigasi */
+nav {
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 2px solid #ffffff50;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+nav {
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 2px solid #ffffff50;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Background animasi saat hover */
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #dcedc8;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  border-radius: 25px;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+nav a:hover {
+  color: #388e3c;
+}
+
+/* Aktif menu (halaman saat ini) */
+nav a.active {
+  background-color: #ffffff;
+  color: #076107;
+  box-shadow: 0 0 10px #ffffff70;
+}
+
+
+
+/* Hero Section */
+section.hero {
+  padding: 100px 20px;
+  height: 80vh;
+  text-align: center;
+  background: url('images/BCG.jpg') no-repeat center center/cover;
+  background-size: 100% 100%;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: 'Amiri', serif;
+  color: white;
+  direction: rtl;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: white;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  padding-right: 5px;
+}
+
+/* Tombol Daftar di Hero */
+section.hero .btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #388e3c;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #dcedc8;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  section.hero {
+    padding: 60px 20px;
+    height: auto;
   }
-  
-  .btn {
-    background-color: #ffffff;
-    color: #388e3c;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s;
+
+  .hero h2 {
+    font-size: 2rem;
+    margin-top: 20px;
   }
-  
-  .btn:hover {
-    background-color: #dcedc8;
+
+  .hero p {
+    font-size: 1rem;
+    border-right: none;
+    padding-right: 0;
   }
-  
+
+  .top-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
   #fropil {
     background: 
       url('pattern-left.png') top left no-repeat,

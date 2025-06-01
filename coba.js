@@ -68,4 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
     judulBawah.textContent = 'MENYINARI MASA DEPAN';
     bubble.style.backgroundColor = '#005f73';
   });
+const photos = document.querySelectorAll('.teacher-photo');
+
+photos.forEach(photo => {
+  photo.addEventListener('mouseenter', () => {
+    photo.classList.add('hovered');
+  });
+  photo.addEventListener('mouseleave', () => {
+    photo.classList.remove('hovered');
+  });
+});
 

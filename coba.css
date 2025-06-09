@@ -203,86 +203,84 @@ section.hero .btn {
 /* ============================= */
 
 #fropil {
-  background: 
-    url('pattern-left.png') top left no-repeat,
-    url('pattern-right.png') top right no-repeat,
-   
-  background-size: 200px, 200px, cover;
-  background-position: top left, top right, center;
-  padding: 60px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-h1 {
-  padding: 10px 10px;
-  text-align: center;
-  font-size: 3rem;
-  color: white;
-}
-
-.fropil-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  border: 6px solid #f3d087;
- 
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-.fropil-left {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-}
-
-.ustadz-img {
+background: 
+      url('pattern-left.png') top left no-repeat,
+      url('pattern-right.png') top right no-repeat,
+      linear-gradient(to bottom, #00a68B, );
+    background-size: 200px, 200px, cover;
+    background-position: top left, top right, center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  h1 {
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .fropil-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 6px solid #f3d087;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  .fropil-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .ustadz-img {
+    .ustadz-img {
   max-width: 90%;
   height: auto;
   border-radius: 50%;
+  margin-top: 0;
 }
 
-.ustadz-name {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-
-.ustadz-desc {
-  color: white;
-  font-size: 15px;
-  margin-top: 5px;
-  font-style: italic;
-  text-align: center;
-}
-
-.fropil-right {
-  flex: 2;
-  padding: 20px;
-  text-align: left;
-}
-
-.fropil-right h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  color: #f3d087;
-  margin-bottom: 20px;
-}
-
-.fropil-right p {
-  font-family: 'Dancing Script', cursive;
-  font-size: 18px;
-  line-height: 1.6;
-  color: white;
-  max-width: 600px;
-}
+  }
+  
+  .ustadz-name {
+    margin-top: 10px; /* Memberikan jarak antara gambar dan nama */
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+  .ustadz-desc {
+    color: white; /* Memberikan warna teks putih */
+    font-size: 15px; /* Ukuran font */
+    margin-top: 5px; /* Memberikan jarak antara nama dan keterangan */
+    font-style: italic; /* Membuat teks miring (opsional) */
+  }
+  
+  
+  .fropil-right {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .fropil-right h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #f3d087;
+    margin-bottom: 20px;
+  }
+  
+  .fropil-right p {
+    font-family: 'Dancing Script', cursive; /* Font miring dan estetik */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+   /* Membuat font miring */
+    color:white; /* Warna teks agar kontras */
+  }
 
 /* ============================= */
 /*      RESPONSIF MOBILE         */

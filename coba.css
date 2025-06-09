@@ -214,11 +214,15 @@ background:
     overflow: hidden;
   }
   
-  h1 {
-    padding: 10px 10px;
-    text-align: center;
-    font-size: 3rem;
-  }
+ h1 {
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 3rem;
+  color: #000000; /* Hitam murni */
+  
+  text-shadow: 0 0 2px #ffffff; /* Efek cahaya tipis di sekitar huruf */
+}
+
   
   .fropil-container {
     display: flex;

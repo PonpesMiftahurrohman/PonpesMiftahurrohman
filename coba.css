@@ -206,7 +206,7 @@ section.hero .btn {
   background: 
     url('pattern-left.png') top left no-repeat,
     url('pattern-right.png') top right no-repeat,
-    linear-gradient(to bottom, #00a68B, #007F6B);
+   
   background-size: 200px, 200px, cover;
   background-position: top left, top right, center;
   padding: 60px 20px;

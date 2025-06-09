@@ -218,8 +218,8 @@ background:
   padding: 10px 10px;
   text-align: center;
   font-size: 3rem;
-  color: #000000; /* Hitam murni */
-  text-shadow: 0 0 2px #ffffff; /* Efek cahaya tipis di sekitar huruf */
+  color: #ffff;
+  
 }
 
   
@@ -336,7 +336,7 @@ h1 {
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 2.8rem;
-  color: #1b5e20; /* hijau lebih gelap */
+  color: #ffff; /* hijau lebih gelap */
 }
 
 /* Container grid */
